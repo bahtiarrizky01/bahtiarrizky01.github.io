@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/lightslider.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <title>Undangan Pernikahan Nadila & Deni</title>
+</head>
+
+<body>
+    <audio id="audio" src="assets/audio.mp3" loop hidden></audio>
+    <main class="l-main">
+        <!--===== COVER =====-->
+        <section class="cover" id="cover">
+            <div class="cover__container">
+                <div class="cover__data">
+                    <p style="font-size: 1.2rem;">Undangan Pernikahan</p>
+                    <h1 class="cover__title">Nadila & Deni</h1>
+                    <p style="margin-top: -40px;">Minggu, 4 Juli 2021</p>
+                    <a href="#couple" class="transparent_btn" value="play" onclick="myFunction()">Buka
+                        Undangan</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--===== COUPLE =====-->
+        <section class="couple" id="couple" onclick="myFunction()">
+            <div class="couple__container">
+                <img src="img/decor.png" alt="" class="decoration">
+                <div class="couple__surah">
+                    <p>"Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu
+                        sendiri supaya kamu mendapatkan ketenangan hati dan dijadikan-Nya kasih sayang diantara kamu
+                        sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir"</p>
+                    <br>
+                    <p><span>(Surat Ar-Ruum:21)</span></p>
+                    <div id="myBtn" style="display: none;">
+                        <a href="#open-modal" class="float openmodale">
+                            <img src="img/amplop-black.png" alt="" style="width: 2.8rem; margin-top: .3rem;">
+                        </a>
+                        <div class="label-container" id="hideDiv">
+                            <div class="label-text">Berikan amplopmu</div>
+                            <i class="fa fa-play label-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/decor.png" alt="" class="decoration" style="margin-top: -2rem;">
+                <div class="couple__bridegroom">
+                    <h1 class="couple__title">Calon Pengantin</h1>
+                    <div class="mempelai">
+                        <img src="img/woman.jpg" class="rounded-circle" alt="">
+                        <h2>Nadila Hidayanti</h2>
+                        <b>putri bungsu dari</b>
+                        <p>Bapak Hidayat & Ibu Sri Yusanti</p>
+                        <h2 style="font-size: 3rem !important; margin-top: 1.5rem;">&</h2>
+                        <img src="img/man.jpg" class="rounded-circle" alt="" style="margin-top: 1rem;">
+                        <h2>Deni Maulana</h2>
+                        <b>putra bungsu dari</b>
+                        <p>Bapak Didi Supardi & Ibu Ihat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== GALLERIES =====-->
+        <section class="galleries" id="galleries">
+            <div class="galleries__container">
+                <h1 class="galleries__title">Moment yang berharga</h1>
+                <p>"Menciptakan kenangan adalah hadiah yang tak ternilai harganya. Kenangan akan bertahan seumur hidup;
+                    benda-benda hanya dalam waktu singkat."</p>
+                <center>
+                    <span>&#10095 &#10095</span>
+                </center>
+                <p style="font-size: 12px; text-align: center; margin-bottom: -10px;">Geser gambar ke samping</p>
+                <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-a">
+                        <!--box-slider--------------->
+                        <div class="box">
+                            <!--img-box---------->
+                            <div class="slide-img">
+                                <img alt="1" src="img/galeri_1.jpg">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-c">
+                        <!--box-slider--------------->
+                        <div class="box">
+                            <!--img-box---------->
+                            <div class="slide-img">
+                                <img alt="2" src="img/galeri_2.jpg">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-c">
+                        <!--box-slider--------------->
+                        <div class="box">
+                            <!--img-box---------->
+                            <div class="slide-img">
+                                <img alt="3" src="img/galeri_3.jpg">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-c">
+                        <!--box-slider--------------->
+                        <div class="box">
+                            <!--img-box---------->
+                            <div class="slide-img">
+                                <img alt="4" src="img/1_cover.jpg">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--===== DATE =====-->
+        <section class="date section" id="date">
+            <div class="date__container">
+                <h1><strong>Acara Akan diselenggarakan</strong></h1>
+                <div id="countdown">
+                    <ul>
+                        <li><span id="days"></span>Hari</li><br>
+                        <li><span id="hours"></span>Jam</li>
+                        <li><span id="minutes"></span>Menit</li>
+                        <li><span id="seconds"></span>Detik</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--===== LOCATION =====-->
+        <section class="location section" id="location">
+            <div class="location__container">
+                <h1>Peta Lokasi</h1>
+                <p><strong>Kediaman mempelai wanita</strong><br>Jl. Darul Quran Ruko A7, RT.03/RW.02,<br> Loji, Kec.
+                    Bogor
+                    Bar., Kota Bogor, Jawa Barat 16117</p><br>
+                <div class="iframe-maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4985532359856!2d106.76964461477104!3d-6.584777795237847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzUnMDUuMiJTIDEwNsKwNDYnMTguNiJF!5e0!3m2!1sid!2sid!4v1621647277097!5m2!1sid!2sid"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <center>
+                    <a class="transparent_btn" target="_blank" href="https://goo.gl/maps/T8NEewa4P8QreTjP9"><img
+                            src="img/placeholder-white.png" style="width: 20px;"> Buka di Gmaps</a>
+                </center>
+            </div>
+        </section>
+
+        <!--===== COVID PREVENTION =====-->
+        <section class="prevention" id="prevention">
+            <h1>Pencegahan Covid-19</h1>
+            <p style="margin-bottom: 2rem;">Acara ini akan diselenggarakan dengan mematuhi<br>protokol pencegahan
+                penyebaran COVID-19.</p>
+            <div class="prevention__container">
+                <div class="row">
+                    <div class="prevention__box">
+                        <img src="img/prev1.png" alt="" class="prevention__img">
+                        <p>Tamu diwajibkan mengenakan masker</p>
+                    </div>
+
+                    <div class="prevention__box">
+                        <img src="img/prev2.png" alt="" class="prevention__img">
+                        <p>Suhu tubuh normal<br>(dibawah 37,5°C)</p>
+                    </div>
+
+                    <div class="prevention__box">
+                        <img src="img/prev3.png" alt="" class="prevention__img">
+                        <p>Saling menjaga jarak<br>minimal 2 meter</p>
+                    </div>
+
+                    <div class="prevention__box">
+                        <img src="img/prev4.png" alt="" class="prevention__img">
+                        <p>Cuci tangan menggunakan air dan sabun<br>atau menggunakan hand sanitizer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== WISHES =====-->
+        <section class="wishes" id="wishes">
+            <div class="wishes__container">
+                <h1>Kirim ucapan</h1>
+                <p>Kirim ucapan dan doa terhadap pengantin</p>
+                <center>
+                    <a class="transparent_btn" target="_blank"
+                        href="https://api.whatsapp.com/send?phone=6289610203030"><img src="img/fountain-pen-white.png"
+                            style="width: 20px;"> Tulis ucapan</a>
+                </center>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <div class="row">
+            <p>© 2021 Deni Fotografer</p>
+            <div class="footer__icon">
+                <img src="img/instagram-white.png" alt="">
+                <img src="img/facebook-white.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modale" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2>Berikan Amplop</h2>
+                <a href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
+            </div>
+            <div class="modal-body">
+                <p style="font-size: 1.3rem;"><strong>Deni Maulana</strong></p>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="img/bca-min.png" alt="" style="width: 3rem; margin-top: -0.16rem !important;">
+                    <p style="font-weight: bold;" id="p1">1111 1234 2222 </p>
+                    <p style="color: gray; margin-left: .5rem !important;" id="copyTeks"
+                        onclick="copyToClipboard('#p1')">
+                        salin nomor</p>
+                </div>
+            </div>
+            <div class="modal-footer" style="display: none;">
+                <p style="color: #3bbd2a;">Teks disalin ✓</p>
+            </div>
+        </div>
+    </div>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Slider -->
+    <script src="assets/lightslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#autoWidth').lightSlider({
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#autoWidth').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+
+    <!-- Alert -->
+    <script>
+        $(document).ready(function () {
+            // alert('hiiiii');
+            $("#copied").click(function () {
+                $(".alert-success").slideToggle("slow").delay(2000).slideToggle("slow");
+            });
+        });
+    </script>
+
+    <!-- Floating -->
+    <script>
+        function myFunction() {
+            var audio = document.getElementById("audio");
+            audio.play();
+
+            var x = document.getElementById("myBtn");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+    <!-- Modal -->
+    <script>
+        $('.openmodale').click(function (e) {
+            e.preventDefault();
+            $('.modale').addClass('opened');
+        });
+        $('.closemodale').click(function (e) {
+            e.preventDefault();
+            $('.modale').removeClass('opened');
+        });
+    </script>
+
+    <!-- Hide -->
+    <script>
+        $(function () {
+            setTimeout(function () { $("#hideDiv").fadeOut(6000); }, 6000)
+        })
+    </script>
+
+    <!-- Copy teks -->
+    <script>
+        $(document).ready(function () {
+            // alert('hiiiii');
+            $("#copyTeks").click(function () {
+                $(".modal-footer").slideToggle("slow").delay(2000).slideToggle("slow");
+            });
+        });
+
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    </script>
+
+</body>
+
+</html>
