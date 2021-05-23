@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/lightslider.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="assets/style.css">
 
@@ -31,7 +33,7 @@
 
         <!--===== COUPLE =====-->
         <section class="couple" id="couple" onclick="myFunction()">
-            <div class="couple__container">
+            <div class="couple__container" data-aos="fade-up" data-aos-duration="1000">
                 <img src="img/decor.png" alt="" class="decoration">
                 <div class="couple__surah">
                     <p>"Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu
@@ -50,7 +52,7 @@
                     </div>
                 </div>
                 <img src="img/decor.png" alt="" class="decoration" style="margin-top: -2rem;">
-                <div class="couple__bridegroom">
+                <div class="couple__bridegroom" data-aos="fade-up" data-aos-duration="1000">
                     <h1 class="couple__title">Calon Pengantin</h1>
                     <div class="mempelai">
                         <img src="img/woman.jpg" class="rounded-circle" alt="">
@@ -70,13 +72,16 @@
         <!--===== GALLERIES =====-->
         <section class="galleries" id="galleries">
             <div class="galleries__container">
-                <h1 class="galleries__title">Moment yang berharga</h1>
-                <p>"Menciptakan kenangan adalah hadiah yang tak ternilai harganya. Kenangan akan bertahan seumur hidup;
-                    benda-benda hanya dalam waktu singkat."</p>
-                <center>
-                    <span>&#10095 &#10095</span>
-                </center>
-                <p style="font-size: 12px; text-align: center; margin-bottom: -10px;">Geser gambar ke samping</p>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="galleries__title">Moment yang berharga</h1>
+                    <p>"Menciptakan kenangan adalah hadiah yang tak ternilai harganya. Kenangan akan bertahan seumur
+                        hidup;
+                        benda-benda hanya dalam waktu singkat."</p>
+                    <center>
+                        <span>&#10095 &#10095</span>
+                    </center>
+                    <p style="font-size: 12px; text-align: center; margin-bottom: -10px;">Geser gambar ke samping</p>
+                </div>
                 <ul id="autoWidth" class="cs-hidden">
                     <li class="item-a">
                         <!--box-slider--------------->
@@ -201,8 +206,10 @@
         <div class="row">
             <p>© 2021 Deni Fotografer</p>
             <div class="footer__icon">
-                <img src="img/instagram-white.png" alt="">
-                <img src="img/facebook-white.png" alt="">
+                <a href="https://www.instagram.com/denifotografer23/" target="_blank"><img src="img/instagram-white.png"
+                        alt=""></a>
+                <a href="https://web.facebook.com/deni.maulana.77" target="_blank"><img src="img/facebook-white.png"
+                        alt=""></a>
             </div>
         </div>
     </footer>
@@ -218,10 +225,11 @@
                 <p style="font-size: 1.3rem;"><strong>Deni Maulana</strong></p>
                 <div style="display: flex; justify-content: center; align-items: center;">
                     <img src="img/bca-min.png" alt="" style="width: 3rem; margin-top: -0.16rem !important;">
-                    <p style="font-weight: bold;" id="p1">1111 1234 2222 </p>
-                    <p style="color: gray; margin-left: .5rem !important;" id="copyTeks"
+                    <p style="font-weight: bold;">1111 1234 2222 </p>
+                    <p id="p1" hidden>111112342222</p>
+                    <a href="#" style="color: gray; margin-left: .5rem !important;" id="copyTeks"
                         onclick="copyToClipboard('#p1')">
-                        salin nomor</p>
+                        salin nomor</a>
                 </div>
             </div>
             <div class="modal-footer" style="display: none;">
@@ -233,6 +241,9 @@
     <!--===== MAIN JS =====-->
     <script src="assets/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script>
         $(document).ready(function () {

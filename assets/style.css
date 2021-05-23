@@ -520,7 +520,6 @@ a {
     border-radius: 5px;
     text-align: center;
     position: fixed;
-    top: -100%;
     z-index: 11;
     width: 360px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -560,3 +559,12 @@ a {
 /* End MODAL */
 
 /* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .cover {
+        background-position: 0 -15rem;
+    }
+}
