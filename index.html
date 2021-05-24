@@ -22,9 +22,13 @@
             <div class="cover__container">
                 <div class="cover__data">
                     <p style="font-size: 1.2rem;">Undangan Pernikahan</p>
-                    <h1 class="cover__title">Nadila & Deni</h1>
+                    <div class="row" style="justify-content: center;">
+                        <h1 class="cover__title">Nadila</h1>
+                        <p style="margin: 0px 1rem; font-size: 1.4rem;" ;">&</p>
+                        <h1 class="cover__title">Deni</h1>
+                    </div>
                     <p style="margin-top: -40px;">Minggu, 4 Juli 2021</p>
-                    <a href="#couple" class="transparent_btn" value="play" onclick="myFunction()">Buka
+                    <a href="#couple" class="transparent_btn" value="play" onclick="play()">Buka
                         Undangan</a>
                 </div>
 
@@ -41,15 +45,6 @@
                         sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir"</p>
                     <br>
                     <p><span>(Surat Ar-Ruum:21)</span></p>
-                    <div id="myBtn" style="display: none;">
-                        <a href="#open-modal" class="float openmodale">
-                            <img src="img/amplop-black.png" alt="" style="width: 2.8rem; margin-top: .3rem;">
-                        </a>
-                        <div class="label-container" id="hideDiv">
-                            <div class="label-text">Berikan amplopmu</div>
-                            <i class="fa fa-play label-arrow"></i>
-                        </div>
-                    </div>
                 </div>
                 <img src="img/decor.png" alt="" class="decoration" style="margin-top: -2rem;">
                 <div class="couple__bridegroom" data-aos="fade-up" data-aos-duration="1000">
@@ -115,12 +110,21 @@
                         <div class="box">
                             <!--img-box---------->
                             <div class="slide-img">
-                                <img alt="4" src="img/1_cover.jpg">
+                                <img alt="4" src="img/galeri_4.jpeg">
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
+        </section>
+
+        <!-- ==== VIDEO YT ===== -->
+        <section class="video">
+            <h1>Video Prawedding</h1>
+            <iframe id="ytplayer" type="text/html" class="iframe-maps" style="border: none; border-color: black;"
+                src="https://www.youtube.com/embed/TP2W2kBGIEM" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen frameborder="0"></iframe>
         </section>
 
         <!--===== DATE =====-->
@@ -135,6 +139,7 @@
                         <li><span id="seconds"></span>Detik</li>
                     </ul>
                 </div>
+                <p style="font-size: 1.2rem; font-weight: bold; margin-top: 1rem;">Minggu, 4 Juli 2021</p>
             </div>
         </section>
 
@@ -156,6 +161,16 @@
                 </center>
             </div>
         </section>
+
+        <div id="myBtn" class="myBtn">
+            <a href="#open-modal" class="float openmodale">
+                <img src="img/amplop-black.png" alt="" style="width: 2.8rem; margin-top: .3rem;">
+            </a>
+            <div class="label-container" id="hideDiv">
+                <div class="label-text" style="font-family: var(--body-font);">Berikan amplopmu</div>
+                <i class="fa fa-play label-arrow"></i>
+            </div>
+        </div>
 
         <!--===== COVID PREVENTION =====-->
         <section class="prevention" id="prevention">
@@ -194,8 +209,8 @@
                 <p>Kirim ucapan dan doa terhadap pengantin</p>
                 <center>
                     <a class="transparent_btn" target="_blank"
-                        href="https://api.whatsapp.com/send?phone=6289610203030"><img src="img/fountain-pen-white.png"
-                            style="width: 20px;"> Tulis ucapan</a>
+                        href="https://api.whatsapp.com/send?phone=6289610203030&text=Selamat+menempuh+hidup+baru+untuk+kedua+mempelai">
+                        <img src="img/fountain-pen-white.png" style="width: 20px;"> Tulis ucapan</a>
                 </center>
             </div>
         </section>
@@ -225,11 +240,22 @@
                 <p style="font-size: 1.3rem;"><strong>Deni Maulana</strong></p>
                 <div style="display: flex; justify-content: center; align-items: center;">
                     <img src="img/bca-min.png" alt="" style="width: 3rem; margin-top: -0.16rem !important;">
-                    <p style="font-weight: bold;">1111 1234 2222 </p>
-                    <p id="p1" hidden>111112342222</p>
-                    <a href="#" style="color: gray; margin-left: .5rem !important;" id="copyTeks"
-                        onclick="copyToClipboard('#p1')">
-                        salin nomor</a>
+                    <p style="font-weight: bold;" id="p1">6820634461</p>
+                    <a href="#" style="color: gray; margin-left: .5rem !important; text-decoration: underline;"
+                        id="copyTeks" onclick="copyToClipboard('#p1')">
+                        salin
+                    </a>
+                </div>
+                <div>
+                    <p>atau</p>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="img/bca-min.png" alt="" style="width: 3rem; margin-top: -0.16rem !important;">
+                    <p style="font-weight: bold;" id="p2">0897171906</p>
+                    <a href="#" style="color: gray; margin-left: .5rem !important; text-decoration: underline;"
+                        id="copyTeks" onclick="copyToClipboard('#p2')">
+                        salin
+                    </a><br>
                 </div>
             </div>
             <div class="modal-footer" style="display: none;">
@@ -286,17 +312,29 @@
         });
     </script>
 
-    <!-- Floating -->
+    <!-- audio -->
     <script>
-        function myFunction() {
+        function play() {
             var audio = document.getElementById("audio");
             audio.play();
-
-            var x = document.getElementById("myBtn");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            }
         }
+    </script>
+
+    <!-- Floating -->
+    <script>
+        myID = document.getElementById("myBtn");
+
+        var myScrollFunc = function () {
+            var y = window.scrollY;
+            if (y >= 3800) {
+                myID.className = "myBtn show"
+            } else {
+                myID.className = "myBtn hide"
+            }
+        };
+
+        window.addEventListener("scroll", myScrollFunc);
+
     </script>
 
     <!-- Modal -->

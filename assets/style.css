@@ -1,6 +1,11 @@
 /*===== GOOGLE FONTS =====*/
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: "brittney-signature";
+    src: url('Brittney-Signature-demo.otf');
+}
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -21,8 +26,8 @@
 
 /*===== Typography =====*/
 :root {
-    --body-font: 'Josefin Slab', sans-serif;
-    --heading-font: 'Playball', cursive;
+    --body-font: 'Josefin Slab', serif;
+    --heading-font: 'brittney-signature';
     --h1-font-size: 3rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
@@ -260,7 +265,7 @@ img {
     margin-bottom: 1rem;
 }
 
-/* Galeri */
+/* Gallery */
 .box {
     width: 300px;
     box-shadow: 2px 2px 8px #000;
@@ -290,6 +295,18 @@ img {
 }
 
 /* End Galeri */
+
+/* ===== Video ===== */
+.video {
+    color: var(--white-color);
+    text-align: center;
+}
+
+.video h1 {
+    font-family: var(--heading-font);
+    font-size: var(--h1-font-size);
+    margin-bottom: 1.5rem;
+}
 
 /*===== DATE =====*/
 .date {
@@ -438,6 +455,16 @@ a {
 }
 
 /* FLOATING BUTTON */
+.hide {
+    opacity: 0;
+    left: -100%;
+}
+
+.show {
+    opacity: 1;
+    left: 0;
+}
+
 .float {
     position: fixed;
     width: 60px;
