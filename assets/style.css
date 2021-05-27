@@ -1,5 +1,6 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 /* My font */
 @font-face {
@@ -28,6 +29,8 @@
 :root {
     --body-font: 'Josefin Slab', serif;
     --heading-font: 'brittney-signature';
+    --addition-font: 'Pacifico', cursive;
+    ;
     --h1-font-size: 3rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
@@ -151,7 +154,7 @@ img {
 
 .cover__title {
     align-self: center;
-    font-family: var(--heading-font);
+    font-family: var(--addition-font);
     font-size: var(--h2-font-size);
     line-height: 1;
     letter-spacing: .25rem;
@@ -163,6 +166,19 @@ img {
     font-size: var(--normal-font-size);
     font-family: var(--body-font);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.box-image img {
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    margin-left: -100px;
+    left: 50%;
+    top: 17rem;
+}
+
+.box-image p {
+    font-family: var(--addition-font);
 }
 
 /*BUTTONS*/
@@ -469,7 +485,7 @@ a {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 20px;
+    bottom: 60px;
     right: 10px;
     border: 2px solid #FFF;
     background-color: #FFF;
@@ -489,7 +505,7 @@ a {
 
 .label-text {
     color: #FFF;
-    background: rgba(51, 51, 51, 0.5);
+    background: rgba(51, 51, 51, 0.8);
     display: table-cell;
     vertical-align: middle;
     padding: 10px;
@@ -584,6 +600,9 @@ a {
 }
 
 /* End MODAL */
+.desktop__cover {
+    display: none;
+}
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px) {
@@ -594,4 +613,45 @@ a {
     .cover {
         background-position: 0 -15rem;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        margin: 0;
+    }
+
+    .desktop__cover {
+        display: block;
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background: url('../img/cover-kiri.jpg');
+        background-size: cover;
+        box-shadow: 5px 0 5px -5px #333;
+    }
+
+    .desktop__cover h1 {
+        font-size: var(--h1-font-size);
+        font-family: var(--heading-font);
+        line-height: 3.3rem;
+        margin-top: 65%;
+        margin-left: 2rem;
+        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .main__content {
+        width: 40%;
+        float: right;
+    }
+
+    .cover {
+        background-position: 0;
+    }
+
+    .box-image img {
+        position: absolute;
+        left: 80%;
+        top: 17rem;
+    }
+
 }
