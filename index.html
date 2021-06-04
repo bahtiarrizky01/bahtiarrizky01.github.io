@@ -27,12 +27,7 @@
                 <div class="cover__container">
                     <div class="cover__data">
                     	<!-- <p style="font-size: 1.2rem; margin-bottom: 2.5rem;">Undangan Pernikahan</p> -->
-                        <p style="font-size: 1.5rem; margin-bottom: 14rem; margin-top: -14rem; text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5) !important;">Undangan Pernikahan</p>
-                        <!--                     <div class="row" style="justify-content: center;">
-                        <h1 class="cover__title">Nadila</h1>
-                        <p style="margin: 0px 1rem; font-size: 1.4rem;">&</p>
-                        <h1 class="cover__title">Deni</h1>
-                    </div> -->
+                        <p style="font-size: 1.5rem; margin-bottom: 13rem; margin-top: -14rem; text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5) !important;">Undangan Pernikahan</p>
                         <div class="box-image">
                             <img src="img/circle-decoration-white.png" alt="">
                             <p style="text-align: center; font-size: 2.2rem; margin-bottom: 0px;">Nadila</p>
@@ -40,8 +35,7 @@
                             <p style="text-align: center; font-size: 2.2rem; margin-bottom: 0px;">Deni</p>
                         </div>
                         <p style="margin-top: 2rem;">Minggu, 4 Juli 2021</p>
-                        <a href="#couple" class="transparent_btn" value="play" onclick="play()">Buka
-                            Undangan</a>
+                        <a href="#couple" class="transparent_btn" value="play" onclick="play()" style="position: absolute; z-index: 1; margin-left: -4.3rem;">Buka Undangan</a>
                     </div>
 
                 </div>
@@ -254,7 +248,7 @@
     </div>
 
     <!-- LOADER -->
-    <div class="loader-wrapper">
+    <div class="loader-wrapper" style="z-index: 2;">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
 
@@ -394,18 +388,12 @@
         }
     </script>
 
-    <!-- Hide -->
-    <!-- <script>
-        $(function () {
-            setTimeout(function () { $("#hideDiv").fadeOut(10000); }, 10000)
-        })
-    </script> -->
-
     <!-- Copy teks -->
     <script>
         $(document).ready(function () {
             // alert('hiiiii');
-            $("#copyTeks").click(function () {
+            $("#copyTeks").click(function ($e) {
+                $e.preventDefault();
                 $(".modal-footer").slideToggle("slow").delay(2000).slideToggle("slow");
             });
         });
